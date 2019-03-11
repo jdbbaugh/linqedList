@@ -62,6 +62,16 @@ namespace linqedList
 
             Console.WriteLine(numbers.Count());
 
+            Console.WriteLine();
+            Console.WriteLine("add nums up in list");
+            List<double> purchases = new List<double>()
+            {
+                2340.29, 745.31, 21.76, 34.03, 4786.45, 879.45, 9442.85, 2454.63, 45.65
+            };
+
+            Console.WriteLine(purchases.Sum());
+
+
 
         }
     }
