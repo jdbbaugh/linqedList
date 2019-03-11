@@ -48,6 +48,16 @@ namespace linqedList
 
             Console.WriteLine(name);
         }
+        Console.WriteLine();
+        Console.WriteLine("numbers Ascending");
+        List<int> numbersAscend = new List<int> (from num in numbers
+            orderby num ascending
+            select num).ToList();
+            foreach(int num in numbersAscend) {
+
+            Console.WriteLine(num);
+            }
+
         }
     }
 }
