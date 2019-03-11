@@ -57,6 +57,11 @@ namespace linqedList
 
             Console.WriteLine(num);
             }
+            Console.WriteLine();
+            Console.WriteLine("Output how many numbers are in the numbers list");
+
+            Console.WriteLine(numbers.Count());
+
 
         }
     }
