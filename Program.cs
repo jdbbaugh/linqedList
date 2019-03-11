@@ -123,8 +123,8 @@ namespace linqedList
             Console.WriteLine($"{richPerson.Name} is a Millionaire");
         }
 
-
-
+        Console.WriteLine();
+        Console.WriteLine("Show millionaires Per Bank");
 
 
         }
