@@ -71,6 +71,15 @@ namespace linqedList
 
             Console.WriteLine(purchases.Sum());
 
+            Console.WriteLine();
+            Console.WriteLine("show most expensive product");
+            List<double> prices = new List<double>()
+            {
+                879.45, 9442.85, 2454.63, 45.65, 2340.29, 34.03, 4786.45, 745.31, 21.76
+            };
+
+            Console.WriteLine(prices.Max());
+
 
 
         }
