@@ -28,6 +28,26 @@ namespace linqedList
             foreach(int num in fourSixMultiples){
                 Console.WriteLine(num);
             }
+            Console.WriteLine();
+            Console.WriteLine("Students in alphabetical.");
+
+            List<string> names = new List<string>()
+            {
+                "Heather", "James", "Xavier", "Michelle", "Brian", "Nina",
+                "Kathleen", "Sophia", "Amir", "Douglas", "Zarley", "Beatrice",
+                "Theodora", "William", "Svetlana", "Charisse", "Yolanda",
+                "Gregorio", "Jean-Paul", "Evangelina", "Viktor", "Jacqueline",
+                "Francisco", "Tre"
+            };
+
+        List<string> descend = (from name in names
+            orderby name descending
+            select name).ToList();
+
+        foreach(string name in descend) {
+
+            Console.WriteLine(name);
+        }
         }
     }
 }
