@@ -120,7 +120,7 @@ namespace linqedList
         Console.WriteLine("Show millionaires");
 
         List<Customer> millionaires = (from million in customers
-            where million.Balance > 1000000.00
+            where million.Balance >= 1000000.00
             select million).ToList();
 
         foreach(Customer richPerson in millionaires) {
@@ -134,7 +134,7 @@ namespace linqedList
             group kid by kid.Bank into bankGroup
             select new BanksWithMills{
                 BankName = bankGroup.Key,
-                BankNum = bankGroup.Count(num => num.Balance > 1000000)
+                BankNum = bankGroup.Count(num => num.Balance >= 1000000)
             }).ToList();
 
         foreach(BanksWithMills bank in bankreport){
