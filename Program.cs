@@ -12,6 +12,10 @@ namespace linqedList
             public double Balance { get; set; }
             public string Bank { get; set; }
 }
+        class BanksWithMills {
+            internal string BankName {get; set;}
+            internal double BankNum {get; set;} = 0;
+        }
         static void Main(string[] args)
         {
             List<string> fruits = new List<string>(){"Lemon", "Apple", "Orange", "Lime", "Watermelon", "Loganberry"};
@@ -125,6 +129,18 @@ namespace linqedList
 
         Console.WriteLine();
         Console.WriteLine("Show millionaires Per Bank");
+
+        List<BanksWithMills> bankreport = (from kid in customers
+            group kid by kid.Bank into bankGroup
+            select new BanksWithMills{
+                BankName = bankGroup.Key,
+                BankNum = bankGroup.Count(num => num.Balance > 1000000)
+            }).ToList();
+
+        foreach(BanksWithMills bank in bankreport){
+            Console.WriteLine($"{bank.BankName} has {bank.BankNum}");
+        }
+
 
 
         }
